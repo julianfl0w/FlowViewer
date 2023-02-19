@@ -1,0 +1,290 @@
+          CHANGES IN v0.68.5.1:
+
+Florian Forster (1):
+      lib/ftio.c: Check for interrupted reads and writes in "readn" and "writen".
+
+Paul P. Komkoff Jr (2):
+      Update changelog generator
+      Update version
+
+
+          CHANGES IN v0.68.5:
+
+Paul P. Komkoff Jr (12):
+      Moving stuff around in contrib
+      Start #ifdefing ASN symbol code
+      Update asn.txt and asn.sym
+      Update tcp port names
+      Update protocol names
+      Do not install asn.sym anymore
+      Merge branch 'b0.68.4'
+      Simplify ftltime function by using 64-bit intermediate variable
+      Update version to 0.68.5
+      Merge branch 'b0.68.4'
+      .
+      Revert "Do not install asn.sym anymore"
+
+
+          CHANGES IN v0.68.4.3:
+
+Mark R (1):
+      Upon further investigation, it appears as if there is an alignment issue in     'struct msgip' inside of 'struct ftnet'.  I've looked at some other code, and     there appear to be a handful of useful CMSG_* macros to help deal with this.     RFC 2292 details them.
+
+Paul P. Komkoff Jr (1):
+      Update version
+
+
+          CHANGES IN v0.68.4.2:
+
+Paul P. Komkoff Jr (2):
+      Simplify ftltime function by using 64-bit intermediate variable
+      Update version to 0.68.4.2
+
+
+          CHANGES IN v0.68.4.1:
+
+Dave Plonka (1):
+      This patch modifies flow-export, when using the "-f1" option, so     that it produces a well-formed libpcap version 2.4 file as output.
+
+Paul P. Komkoff Jr (1):
+      Update version
+
+
+          CHANGES IN v0.68.4:
+
+Paul P. Komkoff Jr (1):
+      Update version to final one
+
+
+          CHANGES IN v0.68.4-rc5:
+
+Paul P. Komkoff Jr (2):
+      Stop abusing inline keyword
+      rc5
+
+
+          CHANGES IN v0.68.4-rc4:
+
+Paul P. Komkoff Jr (3):
+      Do not print warning messages if MMAP fails
+      rc4
+      New changelog builder
+
+
+          CHANGES IN v0.68.4-rc3:
+
+Paul P. Komkoff Jr (12):
+      Remove register abuse in ftio.c     Make ftio.c:readn and writen static
+      Make FT_IO_FLAG_MMAP always work but fallback to non-mmap if fd doesn't support it
+      Remove some crap
+      todo
+      Use mmap sometimes
+      More mmaps
+      Makefile flags fix, more un-register-ing
+      More mmaps
+      Documentation build updates
+      More documentation build fixes
+      More docs build tweaks
+      rc3
+
+
+          CHANGES IN v0.68.4-rc2:
+
+Paul P. Komkoff Jr (2):
+      Fix support.c
+      rc2
+
+
+          CHANGES IN v0.68.4-rc1:
+
+Everton da Silva Marques (1):
+      This patch against 0.68.3 makes lib/ftxlate.c     to compile under Solaris 9.
+
+Paul P. Komkoff Jr (34):
+      Use stdint types in ftxlate.c
+      Get rid of u_long, clean support.c
+      Merge branch 'v0.68.3-fixes'
+      Use PRIu32 format specifiers in some places
+      Integer types in ftfile.c
+      Trying to clean up manpage mess
+      Add some ignores
+      Change struct fttime to use stdint types
+      Massively damage flow-dscan
+      Completely eliminate u_long from flow-dscan
+      Quick run through ftfil.c
+      .
+      Massreplace ftstat.c
+      Fix multiple type warnings in ftxlate.c
+      Fix flow-capture and flow-stat
+      Fix flow-xlate
+      Fix the rest of a const char breakage
+      Some refactoring
+      Some refactoring
+      Quit abusing "register" in fmt.c     Convert fmt.c to standard types
+      Quit abusing register in bit1024.c
+      Fix something in ftlib.h
+      Remove radix.h from shipped headers     Remove all references to radix.h types from ftlib.h     (except for one dangling pointer)
+      Fiddle with a build system
+      Convert some more types to standard ones
+      Completely eliminate (u_)int64
+      Get rid of u_int32
+      Fiddle with buildsystem
+      Get rid of (u_)int16
+      Get rid of (u_)int8
+      Get rid of u_int
+      Get rid of u_short
+      Trying to fix stoopid makefile
+      Wrapping up rc1
+
+
+          CHANGES IN v0.68.3:
+
+Paul P. Komkoff Jr (13):
+      Remove ftpaths.h, embed paths into library
+      Finally, remove ftpaths.h.in
+      Build system improvements
+      Really get rid of ftbuild, add --pie autoconf flag, temporarily comment ftconfig.h
+      Really, ftconfig.h is not needed
+      Fix help strings
+      Rename configure.in to configure.ac
+      Remove acconfig.h
+      Amend configure.ac a little
+      Put right version in the right place
+      Fix some of yacc madness
+      Clear more of the flex madness
+      Add new todo list, update version
+
+
+          CHANGES IN v0.68.2:
+
+Everton da Silva Marques (1):
+      Fix flow-capture command line option for preserving inherited umask
+
+Paul P. Komkoff Jr (3):
+      Add googlecode upload script
+      Try to clean up ftbuild.h mess
+      Mark release version
+
+
+          CHANGES IN v0.68.2-rc5:
+
+Paul P. Komkoff Jr (4):
+      Update Cflow and instruction set for Cflow
+      Timekeeping cleanup
+      Try to copy header information in preload mode
+      Update version suffix
+
+
+          CHANGES IN v0.68.2-rc4:
+
+Paul P. Komkoff Jr (2):
+      New rc...
+      Fix header dependencies in lib
+
+
+          CHANGES IN v0.68.2-rc3:
+
+Paul P. Komkoff Jr (5):
+      Quote AC_CONFIG_LIBOBJ_DIR
+      Use fine-grained dist controls instead of dist-hook, fix ftpaths.h.in screwup.
+      Update version suffix
+      Change base version for changelog
+      Expand AC_DEFINEs in configure.in
+
+
+          CHANGES IN v0.68.2-rc2:
+
+Paul P. Komkoff Jr (2):
+      Really update the version
+      Really update the version, part 2
+
+
+          CHANGES IN v0.68.2-rc1:
+
+Paul P. Komkoff Jr (6):
+      Ignore binaries, docs, other stuff
+      Split ftpaths.h out of ftlib.h
+      Fix ftpaths.h generation
+      Fix dependency paths
+      Remove HAVE_LL_STRTOUL
+      Set AC_CONFIG_LIBOBJ_DIR
+
+
+          CHANGES IN v0.68.1:
+
+Paul P. Komkoff Jr (1):
+      Release 0.68.1
+
+
+          CHANGES IN v0.68.1-rc3:
+
+Denis Shaposhnikov (1):
+      Fix crash on expiring old files.
+
+Otavio R. Piske (1):
+      Fix memory leak in flow-export.
+
+Paul P. Komkoff Jr (8):
+      Update distfiles list, remove pyflowtools tarball.
+      Put bison source parser instead of C one.
+      Remove unneeded yacc -d option
+      Include <unistd.h> in lib/support.c     Fix uninitialized variables there
+      Include unistd.h in ftsym.c
+      Fix unitialized variables in lib/ftstat.c and lib/fttag.c
+      Fix overlapping defines in src/flow-export.c
+      Update version
+
+
+          CHANGES IN v0.68.1-rc2:
+
+Paul P. Komkoff Jr (1):
+      Update version
+
+
+          CHANGES IN v0.68.1-rc1:
+
+Alexey Bestchiokov (1):
+      Fix flow-export problems described in     http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=340493
+
+Andreas Jochens (1):
+      Fix an "invalid lvalue in assignment" compile error.
+
+Ben Feinstein (1):
+      Add extra debugging to ftpdu_verify
+
+Ilya Anfimov (1):
+      Fix ip-destination-address/source-tag
+
+Kurt Roeckx (1):
+      Use time_t instead of u_int32 in ftfile_mkpath and ftfile_pathname     functions.
+
+Oleg Milaenko (1):
+      Use temporary time_t type variables to hold time values before displaying.
+
+Paul Hampson (1):
+      Fix paths for jade rebuilding documentation.
+
+Paul P. Komkoff Jr (16):
+      Remove autogenerated files from source tree
+      Fix first line of included python scripts.
+      Avoid external "debug" variable.
+      Fix unitialized variable usage in flow-send
+      Fix unitialized variable usage in flow-export.c
+      On newer toolchain getopt won't work without including unistd.h
+      Update build system to latest automake.     Fix paths to be FHS-compliant.     Always support large files.     Fix docbook builder paths.
+      Update version
+      Fix typo in commit f6734524444e04ffca2a5592061374cda67b4492
+      Add gitignore patterns
+      Update .gitignore
+      We pass "make distcheck" now
+      Remove some extra crap from configure.in
+      Fix first line of included utility scripts
+      Rework postgresql detection
+      Add fork readme, script to make releases, update gitignore
+
+Radu Spineanu (3):
+      Write the pid file only after binding the socket
+      Fix small error in flow-nfilter manpage.
+      Compiles libft with -fPIC to work ok with libcflow-perl
+
+

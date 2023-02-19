@@ -1,0 +1,18 @@
+#!/bin/env perl
+
+#
+# convert unix /etc/{protocols} format to flow-tools
+#
+
+while (<>) {
+
+  chomp;
+
+  next if (/^\s*#/);
+
+  @f = split;
+
+  print "$f[1] $f[0]\n";
+
+}
+

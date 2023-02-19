@@ -1,0 +1,39 @@
+Cflow:
+ Dave Plonka's Cflow perl module.  See http://net.doit.wisc.edu/~plonka/Cflow/
+
+ To properly install Cflow on your system, untar the Cflow archive, cd to the
+ Cflow dir, then do:
+
+   perl Makefile.PL CCFLAGS='-DOSU' LIBS='-lft'
+
+ This assumes you have flow-tools installed on your system fully, including headers 
+ and development libraries. This is the only supported way to use Cflow. Do not
+ try to install it as specified in its readme.
+
+ By lack of popular demand, I removed Cflow tarball from the distribution.
+ You can download it at the URL above, then build by usual means.
+
+inter.net:
+  Miguel A.L. Paraz <map@internet.org.ph>
+  William Emmanuel S. Yu <william.s.yu@ieee.org> <wyy@cersa.admu.edu.ph>
+ flow-split flow-split-non flow-as-if flow-cidr
+
+ Those utilities are way too much outdated and do not work.
+
+acl-filter.tgz:
+ <rwariua@socrates.Berkeley.EDU>
+ Cisco style community and as-path acl's.  Uses mrtd to process
+ BGP dump's.
+
+find_scanners:
+ Paul Dokas <dokas@cs.umn.edu>.  Compact report of top IP's, ports, etc.
+
+pyflowtools:
+ New location: http://code.google.com/p/pyflowtools/
+
+see also:
+
+flow-extract: E. Larry Lidz" <ellidz@eridu.uchicago.edu
+ see http://security.uchicago.edu/tools/net-forensics
+
+
